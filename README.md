@@ -1,10 +1,35 @@
 # Aura Farming
 
+![Aura Farming splash: 30 seconds. Stay unbothered.](docs/images/splash.png)
+
 A 30-second webcam game. Microsoft-Decision-1.1 on Microsoft Foundry watches you and pays out in aura when you farm it
 like the Pacu Jalur boat kid: calm face, chin up, sunglasses, slow and smooth moves.
 
 `azd up` creates everything it needs: its own Microsoft-Decision-1.1 deployment, an App Service to host the game, and a
 managed identity that connects the two. There are no keys to manage.
+
+## Features
+
+The screenshots show the real app UI with an illustrated demo camera and example verdicts, not real webcam frames or
+model evaluations. The splash artwork is AI-generated.
+
+### Camera setup and aura guide
+
+Turn on your camera and learn which expressions, poses and moves earn aura.
+
+![Camera setup alongside the aura guide and scoring explanation](docs/images/features.png)
+
+### Live aura scoring
+
+A 30-second timer, running total, confidence meter, recognized moves, glowing camera border and floating aura payouts.
+
+![Live scoring with a Legendary verdict, Boat-kid wave and a floating aura payout](docs/images/live-scoring.png)
+
+### Round results and personal best
+
+See your total, rank, best-moment snapshot and check statistics, then farm again to beat your locally saved best.
+
+![Round results showing the Pacu Jalur legend rank, best moment and new personal best](docs/images/results.png)
 
 ## What counts as aura
 
