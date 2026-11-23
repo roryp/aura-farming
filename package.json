@@ -1,0 +1,15 @@
+{
+  "name": "aura-farming",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A 30-second webcam game: Microsoft-Decision-1.1 on Microsoft Foundry judges whether you are aura farming like the Pacu Jalur boat kid.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test \"test/*.test.js\""
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

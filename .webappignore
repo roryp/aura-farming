@@ -1,0 +1,16 @@
+# What `azd deploy` leaves out of the App Service package (gitignore syntax). App Service only needs
+# server.js, package.json, lib/ and public/. Above all, never ship a local .env: server.js loads it,
+# and it would point the hosted app at whatever your local copy uses.
+.env
+.env.*
+.azure/
+.git/
+.github/
+.vscode/
+infra/
+node_modules/
+test/
+.gitignore
+.webappignore
+azure.yaml
+README.md

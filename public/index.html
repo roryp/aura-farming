@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aura Farming</title>
+<meta name="description" content="30 seconds to farm aura like the Pacu Jalur boat kid. Microsoft-Decision-1.1 judges your webcam.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='44' fill='%23a855f7'/%3E%3Crect x='20' y='38' width='26' height='16' rx='6' fill='%23111'/%3E%3Crect x='54' y='38' width='26' height='16' rx='6' fill='%23111'/%3E%3Crect x='44' y='42' width='12' height='4' fill='%23111'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<script type="module" src="/app.js"></script>
+</head>
+<body>
+<header class="top">
+  <h1 class="logo">Aura <span>Farming</span></h1>
+  <p class="status" id="status">Checking the judge…</p>
+</header>
+
+<main class="layout">
+  <div class="play">
+    <section class="stage" id="stage" data-phase="intro" aria-label="Camera">
+      <video id="video" autoplay playsinline muted></video>
+      <div class="glow" aria-hidden="true"></div>
+      <div class="timebar" aria-hidden="true"><i id="timebar"></i></div>
+      <div class="hud">
+        <p class="hud-time"><b id="timer">30.0</b><span>s</span></p>
+        <p class="hud-total"><b id="total">0</b><span>aura</span></p>
+      </div>
+      <div class="read">
+        <div class="read-top"><span id="level">Reading your aura…</span><span class="read-move" id="move"></span></div>
+        <div class="meter" aria-hidden="true"><i id="meter"></i><s></s></div>
+      </div>
+      <div class="pops" id="pops" aria-hidden="true"></div>
+
+      <div class="panel panel-intro">
+        <h2>Farm aura for 30 seconds</h2>
+        <p>Calm face, chin up, slow smooth moves. Microsoft-Decision-1.1 judges every second and pays out in aura.</p>
+        <button class="primary" id="camera" type="button">Turn on camera</button>
+        <p class="error" id="error" role="alert"></p>
+      </div>
+      <div class="panel panel-ready">
+        <p>Step back so your face and arms are in view.</p>
+        <button class="primary" id="go" type="button">Start farming</button>
+        <p class="best" id="best-line"></p>
+      </div>
+      <div class="panel panel-countdown"><b id="count">3</b></div>
+      <div class="panel panel-judging"><p>Judging your last frames…</p></div>
+      <div class="panel panel-results" aria-live="polite">
+        <figure class="res-best" id="res-best" hidden>
+          <img id="res-img" alt="Your best aura moment">
+          <figcaption id="res-cap"></figcaption>
+        </figure>
+        <div class="res-body">
+          <p class="res-k">Aura farmed</p>
+          <p class="res-total"><b id="res-total">0</b> aura</p>
+          <h2 class="res-rank" id="res-rank"></h2>
+          <p class="res-line" id="res-line"></p>
+          <p class="res-stats" id="res-stats"></p>
+          <button class="primary" id="again" type="button">Farm again</button>
+          <p class="best" id="res-record"></p>
+        </div>
+      </div>
+    </section>
+    <p class="info" id="info"></p>
+  </div>
+
+  <aside class="guide">
+    <h2>What counts as aura</h2>
+    <p>Aura farming is looking effortlessly cool on purpose. The meme is a boy dancing on the bow of a racing boat at the
+      Pacu Jalur races in Riau, Indonesia: black outfit, sunglasses, a stone-faced calm and slow, smooth moves.</p>
+    <ul class="tips">
+      <li><b>Calm face.</b> No grinning, no laughing.</li>
+      <li><b>Chin up,</b> gaze steady on the horizon.</li>
+      <li><b>Slow, smooth moves.</b> Sweep a hand forward, roll your fists like a wheel, hold one arm forward and one back.</li>
+      <li><b>Sunglasses</b> help. Trying too hard doesn't.</li>
+    </ul>
+    <h2>How it scores</h2>
+    <p>Every 1.25 s, two frames half a second apart go to Microsoft-Decision-1.1 with three questions: is this aura
+      farming, how much aura, and which move. Aura found pays up to +1000 a check, for Legendary.</p>
+    <p class="fine">Frames go to this app's server and its Microsoft Foundry deployment for the check, then they are
+      dropped. Nothing is saved.</p>
+  </aside>
+</main>
+</body>
+</html>
