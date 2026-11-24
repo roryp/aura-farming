@@ -6,6 +6,7 @@
 .azure/
 .git/
 .github/
+.idea/
 .vscode/
 infra/
 node_modules/

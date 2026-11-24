@@ -38,6 +38,7 @@ const ui = {
   timer: $("timer"), timebar: $("timebar"), total: $("total"), level: $("level"), move: $("move"), meter: $("meter"), pops: $("pops"),
   bestLine: $("best-line"), resTotal: $("res-total"), resRank: $("res-rank"), resLine: $("res-line"), resBest: $("res-best"),
   resImg: $("res-img"), resCap: $("res-cap"), resStats: $("res-stats"), resRecord: $("res-record"),
+  moves: document.querySelectorAll(".move[data-move]"),
 };
 
 const canvas = document.createElement("canvas");
@@ -225,12 +226,18 @@ function showRead(verdict) {
   ui.meter.style.transform = `scaleX(${aura})`;
   ui.level.textContent = verdict ? verdict.levelName : "Reading your aura…";
   ui.move.textContent = verdict?.move ? MOVE_LABELS[verdict.move] : "";
+  markMove(verdict?.move);
   ui.stage.classList.remove("found");
   if (verdict?.found) {
     void ui.stage.offsetWidth; // restart the flare
     ui.stage.classList.add("found");
   }
   if (verdict) ui.info.textContent = `${game.checks} checks · aura ${Math.round(aura * 100)}% · ${verdict.latencyMs} ms`;
+}
+
+/** Lights up the guide's card for the move the judge just read; no move clears it. */
+function markMove(move) {
+  for (const card of ui.moves) card.classList.toggle("on", card.dataset.move === move);
 }
 
 function pop(points) {
@@ -253,6 +260,7 @@ function endRound(round) {
 
 function showResults(round) {
   if (game.phase !== "judging" || game.round !== round) return;
+  markMove(null);
   const [, rank, line] = RANKS.find(([min]) => game.total >= min);
   ui.resTotal.textContent = game.total.toLocaleString();
   ui.resRank.textContent = rank;

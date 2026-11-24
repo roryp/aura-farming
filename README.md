@@ -15,15 +15,17 @@ model evaluations. The splash artwork is AI-generated.
 
 ### Camera setup and aura guide
 
-Turn on your camera and learn which expressions, poses and moves earn aura.
+Turn on your camera and learn which expressions, poses and moves earn aura. Each move the judge can read has a small
+silhouette and what it pays a check.
 
-![Camera setup alongside the aura guide and scoring explanation](docs/images/features.png)
+![Camera setup alongside the aura guide, with a silhouette of each move and what it scores](docs/images/features.png)
 
 ### Live aura scoring
 
 A 30-second timer, running total, confidence meter, recognized moves, glowing camera border and floating aura payouts.
+The guide lights up the move the judge just read.
 
-![Live scoring with a Legendary verdict, Boat-kid wave and a floating aura payout](docs/images/live-scoring.png)
+![Live scoring with a Legendary verdict, Boat-kid wave lit up in the guide and a floating aura payout](docs/images/live-scoring.png)
 
 ### Round results and personal best
 
@@ -55,10 +57,12 @@ frames go in the request's `assets` and the state refers to them as `image:frame
 | --- | --- | --- | --- |
 | Is the player aura farming? | `noul` | a probability | Aura is found at 0.5 or more |
 | How much aura? | `score` | No aura, A trace, Some aura, Main character, Legendary | The points |
-| What is the player doing? | `choice` | Boat-kid wave, Arm forward, Unbothered stare, Shades on, Trying too hard, No aura, Can't tell | The live read |
+| What is the player doing? | `choice` | Boat-kid wave, Arm forward, Unbothered stare, Shades on, Trying too hard, No aura, Can't tell | The live read, and the move lit up in the guide |
 
 A check pays `250 × level × probability`, rounded to 10, and only when aura is found. Certain Legendary aura is the
-meme's "+1000 aura". A round makes about 24 checks, and the total sets your rank:
+meme's "+1000 aura". The move doesn't change the points, but the guide shows what each move pays when done well: the
+boat-kid moves are the flowing moves the Legendary level asks for (+1000), the still poses fit Main character (+750), and
+the rest pay nothing. A round makes about 24 checks, and the total sets your rank:
 
 | Aura | Rank |
 | --- | --- |
